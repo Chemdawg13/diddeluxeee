@@ -20,9 +20,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, var(--background-color-1), var(--background-color-2));
+    background: linear-gradient(
+        135deg,
+        var(--background-color-1),
+        var(--background-color-2)
+    );
     font-family: Arial, sans-serif;
     overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("image.jpg"); /* 👈 change path */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; /* or cover */
+
+    opacity: 0.2; /* 20% transparency */
+    z-index: 0;
+    pointer-events: none;
 }
 
 .container {
@@ -34,6 +54,8 @@ body {
     max-width: 600px;
     margin: 20px;
     overflow: visible !important;
+    position: relative;
+    z-index: 2;
 }
 
 .floating-elements {
