@@ -28,7 +28,7 @@ const CONFIG = {
             secretAnswer: "Ja gillar inte dig, jag ÄLSKAR dig! ❤️"           // Secret hover message
         },
         second: {
-            text: "Hur mycket älskar du mig?",                          // For the love meter
+            text: "Hur mycket älskar du mig ens?",                          // For the love meter
             startText: "Såhääär mycket!",                                   // Text before the percentage
             nextBtn: "Nästa ❤️"                                         // Text for the next button
         },
