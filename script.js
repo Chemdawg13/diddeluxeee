@@ -122,11 +122,16 @@ function showNextQuestion(questionNumber) {
 
 // Function to move the "No" button when clicked
 function moveButton(button) {
-    const x = Math.random() * (window.innerWidth - button.offsetWidth);
-    const y = Math.random() * (window.innerHeight - button.offsetHeight);
-    button.style.position = 'fixed';
-    button.style.left = x + 'px';
-    button.style.top = y + 'px';
+    const padding = 40; // distance from screen edges
+    const maxX = window.innerWidth - button.offsetWidth - padding;
+    const maxY = window.innerHeight - button.offsetHeight - padding;
+
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    button.style.position = "fixed";
+    button.style.left = `${randomX}px`;
+    button.style.top = `${randomY}px`;
 }
 
 // Love meter functionality
